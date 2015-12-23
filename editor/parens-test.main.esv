@@ -8,18 +8,18 @@ imports
   Views
 
 language
-  
+
   name : parens-test
-  
+
   extensions : parens
 
   table         : include/parens-test.tbl
-  start symbols : Start
-  
+  start symbols : Expr
+
   provider : include/parens_test.ctree
   provider : include/parens_test-java.jar
   observer : editor-analyze (multifile)
-  
+
 references
 
   reference _ : editor-resolve

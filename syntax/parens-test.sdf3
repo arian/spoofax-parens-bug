@@ -1,18 +1,16 @@
 module parens-test
 
 imports
-  
+
   Common
 
 context-free start-symbols
-  
-  Start
+
+  Expr
 
 context-free syntax
-  
-  Start.Dummy = Expr
 
-  Expr = <(<Expr>)> {bracket} 
+  Expr = <(<Expr>)> {bracket}
 
   Expr.Plus = <<Expr> + <Expr>> {left}
 
