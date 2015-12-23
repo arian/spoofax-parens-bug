@@ -1,0 +1,26 @@
+module parens-test.main
+
+imports
+
+  Colorer
+  Menus
+  Syntax
+  Views
+
+language
+  
+  name : parens-test
+  
+  extensions : parens
+
+  table         : include/parens-test.tbl
+  start symbols : Start
+  
+  provider : include/parens_test.ctree
+  provider : include/parens_test-java.jar
+  observer : editor-analyze (multifile)
+  
+references
+
+  reference _ : editor-resolve
+  hover _     : editor-hover

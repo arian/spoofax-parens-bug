@@ -1,0 +1,25 @@
+module parens-test
+
+imports
+  
+  Common
+
+context-free start-symbols
+  
+  Start
+
+context-free syntax
+  
+  Start.Dummy = Expr
+
+  Expr = <(<Expr>)> {bracket} 
+
+  Expr.Plus = <<Expr> + <Expr>> {left}
+
+  Expr.Mult = <<Expr> * <Expr>> {left}
+
+  Expr.Num = INT
+
+context-free priorities
+  { left: Expr.Mult } >
+  { left: Expr.Plus }
