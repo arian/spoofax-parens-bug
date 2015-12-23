@@ -12,3 +12,6 @@
 /.classpath
 /.project
 /.settings
+
+test.aterm
+test.pp.parens
